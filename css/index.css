@@ -1,0 +1,31 @@
+:root{
+	--link : #9E2A2B;
+	--visited : #7B6D8D;
+	--hover : #BFACC8;
+}
+
+
+* {
+	background: #1A2C3E;
+	color: white;
+	font-family: monospace;
+}
+
+
+nav{
+	display: flex;
+	justify-content: center;
+}
+
+
+nav > * {
+	padding: 0.5rem;
+	font-size: 1.5rem;
+}
+
+a{
+	color: var(--link)
+}
+a:hover{
+	color: var(--hover)
+}
