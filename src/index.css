@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@theme {
+    --color-navy: #1A2C3E;
+    --color-tomato: #E84B37;
+    --color-skye: #7390BF;
+    --color-grass: #3AA669;
+    --color-lavender: color-mix(in oklch longer hue, var(--color-grass) 35%, #ddd 32%);
+}
+
