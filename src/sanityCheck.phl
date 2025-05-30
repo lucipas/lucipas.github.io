@@ -1,0 +1,46 @@
+<!---
+title: This is a test
+pubdate: 12-25-2025
+category: programming
+--->
+.head its a trap!
+    .desc A site showing off the phl thing I made
+    .ref 20
+    .css ./assets/reset.css
+    .vp
+.ehead
+    # h1
+    ## h2
+    ### h3
+    #### h4
+    ##### h5
+    ###### h6
+    .cmt this is a comment
+    .sp this is a span .esp
+    .p
+        this is a paragraph
+        .tbl
+            .tr
+                .td this is a table
+                .td you can use tc instead of td to be more idiomatic with tr
+            .tr
+            .tr
+                .td this is a table
+                .td you can use tc instead of td to be more idiomatic with tr
+            .tr
+        .etbl
+    .ep
+    .ol
+        .li this is a ordered list
+        .li it is quicker than writing out all of the &gt; and &lt;
+    .eol
+    .ul
+        .li and for the sake of completion a unordered list
+    .eul
+    .p
+    	*cpr
+    .ep
+    .p
+    	*pub
+    .ep
+.ebody

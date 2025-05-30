@@ -1,0 +1,23 @@
+<!---
+title: Phl
+pubdate: 12-25-2025
+category: documentation
+--->
+.head Phl docs
+     .desc Phl documentation
+.ehead
+	.p
+		# what is Phl?
+		Phl (preposterous html like) is a mix of preprocessing and markdown.
+		It takes idiomatic phrases and converts them into html.
+	.ep
+	.p
+		# Markdown like tags
+	.ep
+	.p
+		# common style tags
+	.ep
+	.p
+		# SEO tags
+	.ep
+.ebody
