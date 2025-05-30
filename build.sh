@@ -52,6 +52,8 @@ echo preprocessing
 find ./dist -name '*.phl' | xargs sed -Ei -f "preproc.sed" # some preproc stuff lives here so it should be in front.
 echo translating to html
 find ./dist -name '*.phl' | xargs sed -Ei -f "proc.sed"
+echo filling in js
+find ./dist -name '*.phl' | xargs sed -Ei -f "js.sed"
 # find all .xpl files and change it's ext to html
 echo mv *.phl to *.html
 find ./dist -name '*.phl' | sed -E "s/(.+)\.phl/mv \1.phl \1.html/" | bash
