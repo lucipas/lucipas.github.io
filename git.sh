@@ -1,5 +1,5 @@
 #!/bin/bash
 git add .
-git commit -m "[AUTOMATED] build process done."
+shuf -n 1 ./gitCMT.txt | xargs -I{} git commit -m {}
 git status
 echo waiting for push.
