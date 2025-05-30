@@ -74,7 +74,8 @@ else
 fi
 
 # add prev and next to blogs
-# git push
-# git add .
-
+git add .
+git commit -m "[AUTOMATED] build process done."
+git status
+echo waiting for push.
 

@@ -1,0 +1,11 @@
+.head 404 The Little People Lost your Page
+	*gtm
+	.utf8
+	.css ./assets/reset.css
+	.css ./assets/components.css
+.ehead
+	.p
+		We could not find that.
+		[Go Home](./index.phl)
+	.ep
+.ebody

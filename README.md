@@ -1,5 +1,5 @@
 # site analysis
-- 4 html file.
+- 5 html file.
 - 2 css files.
 - 0 image files.
-- 6 total files
+- 9 total files
