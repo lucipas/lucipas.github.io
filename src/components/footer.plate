@@ -1,12 +1,12 @@
-.ft
+@ft
 	## catch me (on the internet) if you can
-	.p
+	@p
 		[bsky.app](https://bsky.app)
 		[x.com](https://x.com)
-		.hr
-	.ep
+		@hr
+	@ep
 	*cpr
 	<!-- MOTD
 	*motd
 	-->
-.eft
+@eft

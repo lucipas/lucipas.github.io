@@ -17,26 +17,6 @@ usage(){
     echo "--phl=[EXT]        changes phl extension from phl to EXT"
 }
 
-
-
-
-
-build() {
-    echo test > $1.html
-}
-
-err () {
-    echo "`date -R` ERR $*" | tee -a log.txt
-}
-
-warn () {
-    echo "`date -R` WARN $*" | tee -a log.txt
-}
-
-info () {
-    echo "`date -R` INFO $*" | tee -a log.txt
-}
-
 # PHL => pages
 # PRL => directories
 rm -rf dist/*
@@ -46,14 +26,16 @@ cp -r src/* dist/
 # find ./dist -type f | grep -E '\.dir$' | xargs dirname | xargs -I{} find {} | grep -E '\.phl$' | xargs gawk '{print}'
 
 # find all the files in dist that are not transformed and edit in place
+echo transforming md elements
+find ./dist -name '*.phl' | xargs sed -Ei -f "./sed/md.sed" 
 echo filling in templates
-find ./dist -name '*.phl' | xargs sed -Ei -f "template.sed" # some preproc stuff lives here so it should be in front.
+find ./dist -name '*.phl' | xargs sed -Ei -f "./sed/template.sed" 
 echo preprocessing
-find ./dist -name '*.phl' | xargs sed -Ei -f "preproc.sed" # some preproc stuff lives here so it should be in front.
+find ./dist -name '*.phl' | xargs sed -Ei -f "./sed/preproc.sed" # some preproc stuff lives here so it should be in front.
 echo translating to html
-find ./dist -name '*.phl' | xargs sed -Ei -f "proc.sed"
+find ./dist -name '*.phl' | xargs sed -Ei -f "./sed/proc.sed"
 echo filling in js
-find ./dist -name '*.phl' | xargs sed -Ei -f "js.sed"
+find ./dist -name '*.phl' | xargs sed -Ei -f "./sed/js.sed"
 # find all .xpl files and change it's ext to html
 echo mv *.phl to *.html
 find ./dist -name '*.phl' | sed -E "s/(.+)\.phl/mv \1.phl \1.html/" | bash
@@ -66,18 +48,14 @@ rm -rf dist/components
 
 if [ -f "./gawk.heap" ]
 then
-    info "Using GAWK's persistent memory for analysis"
+    echo "Using GAWK's persistent memory for analysis"
     find ./dist | gawk 'BEGIN {htc=csc=imc=0}; /\.html/{htc += 1}; /\.css/{csc += 1};/(\.png|\.gif|\.jpeg)/{imc += 1};END{print "# site analysis\n- " htc " html files. Delta of " htc-thtc "\n- " csc " css files. Delta of " csc -tsc "\n- " imc " image files. Delta of " imc - timc ;thtc = htc; tsc = csc; timc = imc}' | tee README.MD
     unset GAWK_PERSIST_FILE
 else
-    info "Not using GAWK's persistent memory for analysis"
+    echo "Not using GAWK's persistent memory for analysis"
     find ./dist -type f | gawk 'BEGIN {htc=csc=imc=0}; /\.html/{htc += 1}; /\.css/{csc += 1};/(\.png|\.gif|\.jpeg)/{imc += 1};END{print "# site analysis\n- " htc " html file.\n- " csc " css files.\n- " imc " image files."}' | tee README.MD
     echo "- $(find ./dist -type f | wc -l) total files" | tee -a ./README.MD
 fi
 
 # add prev and next to blogs
-git add .
-git commit -m "[AUTOMATED] build process done."
-git status
-echo waiting for push.
 
