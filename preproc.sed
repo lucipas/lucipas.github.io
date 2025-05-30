@@ -16,4 +16,4 @@ s/\*log/<div class="log">/
 /\*pub/r./src/components/lastpub.txt
 /\*pub/d
 /\*motd/r./src/components/motd.txt
-\*motd/d
+/\*motd/d
