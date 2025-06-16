@@ -6,5 +6,8 @@ dev:
 css:
 	./mvAssets.sh
 
+clean:
+	./clean.sh
+
 publish:
 	./build.sh && ./clean.sh && ./git.sh

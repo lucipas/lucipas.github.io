@@ -1,0 +1,14 @@
+@head Lessons from Render
+	@desc A few words on my first tech conference.
+	@utf8
+	@favipng ../assets/img/drago.png
+@ehead
+	# Not every one can be superstars.
+	@p
+		If everyone was extraordinary, then everyone would be extra ordinary.
+	@ep
+	# Data will be the new "global currency".
+	@p
+	@ep
+
+@ebody

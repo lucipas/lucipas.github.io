@@ -4,7 +4,9 @@
 # will use a asterisk to denotate
 
 # use .ed to close out these tags.
-/^\s*\[\]/!{
+/^\s*\|\|/!{
+
+	/<code>/,/<\/code>/!{
 	s/\*crd/<div class="crd">/
 	s/\*warn/<div class="warn">/
 	s/\*err/<div class="err">/
@@ -17,4 +19,4 @@
 	/\*pub/d
 	/\*motd/r./src/components/motd.txt
 	/\*motd/d
-}
+}}

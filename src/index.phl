@@ -1,30 +1,24 @@
-<!---
-title: This is a test 
-pubdate: 12-25-2025 
-category: programming 
---->
-@head Lucas Nguyen Software Engineer
-	*gtm
-	*gsap
-	@desc a website for Lucas Nguyen
-	@favipng ./assets/eepyLucas.png
+@head Lucas Nguyen || Software Engineer
+	@desc Lucas Nguyen's Portfolio
 	@utf8
-	@js ./assets/index.js
-	@css ./assets/reset.css
-	@css ./assets/components.css
+	@favipng ./assets/img/drago.png
+	@vp
+	@css ./assets/css/reset.css
 @ehead
-	[] @p is a test
-	# hoi!
-	@p My name is Lucas Nguyen and I am a Software Engineer based out of Atlanta, Georgia. I enjoy a lot of random things from physical and cyber security to speedrunning retro games. @ep @cmt mudkip mudkip mudkip!
-	*crd
-		## projects
-		@p I am currently working on a macro based html prototyping language based off of troff and markdown.
-		It is used to bring you the website you see right now.
-		It uses GNU utilities like awk and sed.
+	# Hi, I am Lucas.
+	@p
+		I am a software engineer based in Atlanta, Georgia.
+		If I am not coding, I am probably either geeking out
+		about retro gaming or physical/cyber security.
+	@ep
+	@p
+		I am currently building a macro based HTML templating 
+		language using GNU utilities like sed and awk.
 		@br
-		[See documentation.](./proj/phl.html)
-		[See the repository.](https://www.github.com/lucipas)
-		@ep
-	@ed
+		[github](https://github.com/lucipas/lucipas.github.io)
+	@ep
+	```
+	this is a test
+	```
 	?feet
 @ebody

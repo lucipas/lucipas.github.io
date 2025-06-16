@@ -6,10 +6,9 @@
 
 # Lines that are not escaped
 # meaning beginning of the line and a []
-/^\s*\[\]/!{
+/^\s*\|\|/!{
+	/<code>/,/<\/code>/!{
 	s/@hr/<hr \/>/
-	s/!\[([A-Za-z0-9 ]+)\]\(([A-Za-z\/.:]+)\)/<img src="\2" alt="\1" \/>/
-	s/\[([A-Za-z.0-9 ]+)\]\(([A-Za-z\/.:]+)\)/<a href="\2">\1<\/a>/
 	s/@eul/<\/ul>/
 	s/@eol/<\/ol>/
 	s/@ul/<ul>/
@@ -45,5 +44,12 @@
 	s/@favi (.+)/<link rel="icon" type="image\/x-icon" href="\1">/
 	s/@favipng (.+)/<link rel="icon" type="image\/png" href="\1">/
 	s/@js (.+)/<script src="\1"><\/script>/
+	s/@h6 (.+)/<h6>\1<\/h6>/
+	s/@h5 (.+)/<h5>\1<\/h5>/
+	s/@h4 (.+)/<h4>\1<\/h4>/
+	s/@h3 (.+)/<h3>\1<\/h3>/
+	s/@h2 (.+)/<h2>\1<\/h2>/
+	s/@h1 (.+)/<h1>\1<\/h1>/
+	
 }
-
+}
