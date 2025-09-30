@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>$title$</title>
+    $if(icon)$
+    <link rel="shortcut icon" href="$icon$" type="image/x-icon">
+    $endif$
+    <meta property="og:title" content="$title$" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    $if(desc)$
+    <meta property="og:description" content="$desc$" />
+    <meta name="description" content="$desc$" />
+    $endif$
+    $if(author)$
+    <meta name="author" content="$author$" />
+    $endif$
+    $if(date)$
+    <meta name="date" content="$date$" />
+    $endif$
+    $for(css)$
+    <link rel="stylesheet" href="$css$" />
+    $endfor$
+    $for(js)$
+    <script src="$js$"></script>
+    $endfor$
+
+</head>
+
+<body>
+    <div class="info">
+        $if(title)$
+        <h1>$title$</h1>
+        $endif$
+        $if(subtitle)$
+        <h2>$subtitle$</h2>
+        $endif$
+        $if(date)$
+        <time datetime="$date$">$date$</time>
+        $endif$
+        $if(author)$
+        <p><strong>$author$</strong></p>
+        $endif$
+</body>
+</div>
+<div class="content">
+$body$
+</div>
+<footer>
+    $if(secret)$
+    <!-- $secret$ -->
+    $endif$
+    <p>&copy; 2025 Lucas Nguyen. All rights reserved.</p>
+</footer>
+</body>
+
+</html>
+
+</html>

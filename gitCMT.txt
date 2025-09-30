@@ -1,8 +1,0 @@
-[AUTOMATED] I changed my website.
-[AUTOMATED] My website changed itself.
-[AUTOMATED] The one where it's all comments.
-[AUTOMATED] I could have written it in rust.
-[AUTOMATED] I am not a frontend designer.
-[AUTOMATED] I want a vacation.
-[AUTOMATED] A robot wrote this commit message.
-[AUTOMATED] brainrot > mybrain.o
