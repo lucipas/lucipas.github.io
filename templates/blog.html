@@ -1,60 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B2S71WH601"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-B2S71WH601');
+    </script>
     <meta charset="utf-8" />
-    <title>$title$</title>
-    $if(icon)$
-    <link rel="shortcut icon" href="$icon$" type="image/x-icon">
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="lucipas.dev" />
+    <meta name="theme-color" content="#1a2c3e">
+    $if(generator)$
+    <meta name="generator" content="$generator$" />
     $endif$
-    <meta property="og:title" content="$title$" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    $if(keywords)$
+    <meta name="keywords" content="$for(keywords)$$keywords$$sep$, $endfor$" />$endif$
     $if(desc)$
-    <meta property="og:description" content="$desc$" />
     <meta name="description" content="$desc$" />
+    <meta property="og:description" content="$desc$" />
     $endif$
-    $if(author)$
-    <meta name="author" content="$author$" />
-    $endif$
-    $if(date)$
-    <meta name="date" content="$date$" />
-    $endif$
+    <title>$title$</title>
+    <meta property="og:title" content="$title$" />
     $for(css)$
     <link rel="stylesheet" href="$css$" />
     $endfor$
-    $for(js)$
-    <script src="$js$"></script>
-    $endfor$
 
+    $if(icon)$
+    <link rel="shortcut icon" type="image/png" href="$icon$">
+    $endif$
 </head>
 
 <body>
-    <div class="info">
-        $if(title)$
-        <h1>$title$</h1>
-        $endif$
-        $if(subtitle)$
-        <h2>$subtitle$</h2>
-        $endif$
-        $if(date)$
-        <time datetime="$date$">$date$</time>
-        $endif$
-        $if(author)$
-        <p><strong>$author$</strong></p>
-        $endif$
-</body>
-</div>
-<div class="content">
-$body$
-</div>
-<footer>
-    $if(secret)$
-    <!-- $secret$ -->
+    $if(title)$<h1>$title$</h1>$endif$
+    $if(desc)$<p class="description">$desc$</p>$endif$
+    $body$
+    $if(msg)$
+    <!-- $msg$ -->
     $endif$
-    <p>&copy; 2025 Lucas Nguyen. All rights reserved.</p>
-</footer>
+
+    <footer>
+        $if(previous)$
+        <a href="$previous$">Previous</a>
+        $endif$
+        $if(next)$
+        <a href="$next$">Next</a>
+        $endif$
+        <div class="signoff">Lucas Nguyen</div>
+        <div class="socials">
+            <a href="https://x.com/lucipas_">twitter</a>
+            <a href="https://github.com/lucipas">GitHub</a>
+            <a href="https://bsky.app/profile/lucipas.dev">bsky</a>
+        </div>
+    </footer>
 </body>
-
-</html>
-
 </html>

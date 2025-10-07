@@ -1,0 +1,9 @@
+{
+  "useMarkdownLinks": true,
+  "newLinkFormat": "shortest",
+  "promptDelete": false,
+  "tabSize": 4,
+  "newFileLocation": "current",
+  "trashOption": "none",
+  "showUnsupportedFiles": true
+}

@@ -1,6 +1,6 @@
 ---
-title: This is a title.
+title: lucipas.dev
+desc: lucipas.dev homepage
 ---
 
-# Flash edit. Will revert.
-
+# Hi, im lucas. This page is a work in progress
