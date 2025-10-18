@@ -53,7 +53,7 @@ for (rootDir,dirs,files) in os.walk(SRC_DIR, topdown=True):
     dest = rootDir.replace(SRC_DIR, DEST_DIR)
     os.makedirs(dest, exist_ok=True)
     icon = "icon:"+os.path.relpath(os.path.join(ICON_DIR,"icon.png"),start=rootDir).replace("src", "dir").replace("\\","/").replace(" ..","")
-    reset = "css:"+os.path.relpath(os.path.join(STYLES_DIR,"index.css"),start=rootDir).replace("src", "dir").replace("\\","/").replace(" ..","")
+    reset = "css:"+os.path.relpath(os.path.join(STYLES_DIR,"reset.css"),start=rootDir).replace("src", "dir").replace("\\","/").replace(" ..","")
     for file in files:
         if(file[0] == "."):
             # if file is a dot file noop
@@ -72,7 +72,6 @@ for (rootDir,dirs,files) in os.walk(SRC_DIR, topdown=True):
                 "--template="+TEMPLATE, # using template
                 "--wrap=none", # don't wrap
                 "-V", icon # using this icon.
-                ,"-V", reset # using this css
             ]
 
             sed = [

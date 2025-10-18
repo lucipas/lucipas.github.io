@@ -1,9 +1,10 @@
 {
   "useMarkdownLinks": true,
-  "newLinkFormat": "shortest",
+  "newLinkFormat": "relative",
   "promptDelete": false,
   "tabSize": 4,
   "newFileLocation": "current",
   "trashOption": "none",
-  "showUnsupportedFiles": true
+  "showUnsupportedFiles": true,
+  "attachmentFolderPath": "./"
 }

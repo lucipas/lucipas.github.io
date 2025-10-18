@@ -29,7 +29,9 @@
     $for(css)$
     <link rel="stylesheet" href="$css$" />
     $endfor$
-
+    $for(csst)$
+    <link rel="stylesheet" href="$css$" />
+    $endfor$
     $if(icon)$
     <link rel="shortcut icon" type="image/png" href="$icon$">
     $endif$
@@ -50,7 +52,6 @@
         $if(next)$
         <a href="$next$">Next</a>
         $endif$
-        <div class="signoff">Lucas Nguyen</div>
         <div class="socials">
             <a href="https://x.com/lucipas_">twitter</a>
             <a href="https://github.com/lucipas">GitHub</a>

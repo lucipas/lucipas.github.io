@@ -1,9 +1,9 @@
 ---
-title: lucipas.dev
-desc: lucipas.dev homepage
 keywords:
   - Programming
   - Software Engineering
+  - Confrences
+desc:
 css:
 author:
   - Lucas Nguyen
@@ -12,7 +12,7 @@ msg:
 previous:
 next:
 writtendate: 18Oct2025
+title:
 subtitle:
 ---
-# Hi! I am Lucas
-I am a full stack software engineer based out of Atlanta.
+HOI
