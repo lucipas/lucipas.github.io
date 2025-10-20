@@ -13,6 +13,6 @@ previous:
 next:
 writtendate: 18Oct2025
 subtitle:
+foot: True
 ---
-# Hi! I am Lucas
-I am a full stack software engineer based out of Atlanta.
+Yeah, I'm Lucas. My links are down there.

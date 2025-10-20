@@ -26,10 +26,10 @@
     $endif$
     <title>$title$</title>
     <meta property="og:title" content="$title$" />
-    $for(css)$
-    <link rel="stylesheet" href="$css$" />
+    $for(acss)$
+    <link rel="stylesheet" href="$acss$" />
     $endfor$
-    $for(csst)$
+    $for(css)$
     <link rel="stylesheet" href="$css$" />
     $endfor$
     $if(icon)$
@@ -44,7 +44,7 @@
     $if(msg)$
     <!-- $msg$ -->
     $endif$
-
+$if(foot)$
     <footer>
         $if(previous)$
         <a href="$previous$">Previous</a>
@@ -58,5 +58,6 @@
             <a href="https://bsky.app/profile/lucipas.dev">bsky</a>
         </div>
     </footer>
+    $endif$
 </body>
 </html>
