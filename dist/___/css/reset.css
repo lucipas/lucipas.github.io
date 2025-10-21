@@ -1,119 +1,169 @@
-*{
-    font-size: 18px;
-    padding: 0;
-    margin: 0;
-    word-break: break-word;
+@layer reset, styles;
+
+:root{
+  --background: #1a2c3e;
+  --foreground: #faefaf;
+  --accent: hsl(162, 75%, 50%);
+  --font-size: 24px;
 }
-body{
+
+
+@layer reset{
+  /* http://meyerweb.com/eric/tools/css/reset/ 
+     v2.0 | 20110126
+     License: none (public domain)
+  */
+  
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed, 
+  figure, figcaption, footer, header, hgroup, 
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video {
+  	margin: 0;
+  	padding: 0;
+  	border: 0;
+  	font-size: 100%;
+  	font: inherit;
+  	vertical-align: baseline;
+  }
+  /* HTML5 display-role reset for older browsers */
+  article, aside, details, figcaption, figure, 
+  footer, header, hgroup, menu, nav, section {
+  	display: block;
+  }
+  body {
+  	line-height: 1;
+  }
+  ol, ul {
+  	list-style: none;
+  }
+  blockquote, q {
+  	quotes: none;
+  }
+  blockquote:before, blockquote:after,
+  q:before, q:after {
+  	content: '';
+  	content: none;
+  }
+  table {
+  	border-collapse: collapse;
+  	border-spacing: 0;
+  }
+
+  *{
+    box-sizing: border-box;
+  }
+}
+
+@layer styles{
+  body{
     padding-left: 15%;
     padding-right: 15%;
+    padding-top: 1lh;
+    background-color: var(--background);
+    color: var(--foreground);
     font-family: monospace;
-    padding-top: 1lh;
-    background-color: hsl(210, 41%, 17%);
-    color:hsl(59, 47%, 70%);
-}
+    font-size: var(--font-size);
+  }
 
-h1,h2,h3,h4,h5,h6{
-   color: hsl(43, 70%, 65%);
-}
 
-p{
+  a{
+    color: var(--accent);
+  }
+  
+  h1,h2,h3,h4,h5,h6{
+    padding-bottom: .75lh;
+  }
+
+  p{
     padding-bottom: .5lh;
-}
+  }
+ 
+  h1:before,h2:before,h3::before,h4::before,h5::before,h6::before{
+    color: var(--accent)
+  }
 
-a{
-    color: hsl(180, 100%, 50%);
-}
 
-.socials {
-    background-color: hsl(0, 0%, 33%);
-    border-radius: 1ch;
-    text-align: center;
-    color: black;
-    margin-top: 1lh;
-    margin-bottom: 1lh;
-}
-.socials > a{
-    color:lch(66.97% 98.4 246.38);
-    text-decoration-line: none;
-}
-
-h1::before{
+  h1::before{
     content: "# ";
-    color: #ffb676;
-}
-h2::before{
+  }
+  h2::before{
     content: "## ";
-    color: #ffb676;
-}
-h3::before{
+  }
+  h3::before{
     content: "### ";
-    color: #ffb676;
-}
-h4::before{
+  }
+  h4::before{
     content: "#### ";
-    color: #ffb676;
-}
-h5::before{
+  }
+  h5::before{
     content: "##### ";
-    color: #ffb676;
-}
-h6::before{
+  }
+  h6::before{
     content: "###### ";
-    color: #ffb676;
-}
-div.sourceCode > *, div.sourceCode, pre:has(code){
-    background-color: rgb(67, 85, 102);
-    border-radius: 1ch;
-    color: lab(67% 0 0);
-    background-color: rgb(67, 85, 102);
-}
+  }
+  a[href]:not(
+  :where(
+  [href^="./"],
+  [href^="/"]:not([href^="//"]),
+  )
+  ){
+    text-decoration-style: wavy;
+    text-decoration-color: aqua;
+  }
 
-pre:has(code){
-    padding-left: 1ch;
-    padding-right: 1ch;
-}
-
-th, td{
-    padding-left: 1ch;
-    padding-right: 1ch;
-}
-th, td{
-    border: 1px solid #ffb676;
-}
-
-th{
-    font-weight: bold;
-    color: white;
-}
-
-table{
-    max-width: 100%;
-    width: 100%;
-    border-collapse: collapse;
-}
-
-img{
-    padding-top: 1lh;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-}
-figcaption{
-    text-align: center;
-    font-style: italic;
-    padding-bottom: 1lh;
-}
-
-blockquote{
-    border-left: .5ch solid #B1345F;
-    margin-left: 0;
-    margin-right: 0;
+  blockquote{
+    border-left: .5ch solid var(--accent);
     padding-left: .5ch;
-    color: hsl(43, 70%, 75%);
+  }
+
+  blockquote > p{
+    padding: 0;
+  }
+
+  td, th{
+    padding: 1ch;
+    border: 4px solid var(--accent)
+  }
+
+  code{
+    background: grey;
+    padding: 0 1ch 0 1ch ;
+  }
+
+  pre:has(code){
+    padding-left: 1ch;
+    padding-top: .5lh;
+    padding-bottom: .5lh;
+    padding-right: 1ch;
+    background: grey;
+  }
+
+  pre > code{
+    background: none;
+    padding: 0;
+  }
+  
+  sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
 }
 
-blockquote > p{
-    padding-bottom: 0;
+  sup {
+    top: -0.5ch;
+  }
+
+  sub {
+    bottom: -0.5ch;
+  }
 }
