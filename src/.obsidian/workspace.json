@@ -4,95 +4,37 @@
     "type": "split",
     "children": [
       {
-        "id": "2aada4ec2a5fe529",
+        "id": "e58a8ae8a5544ec1",
         "type": "tabs",
         "children": [
           {
-            "id": "ef89357c6ff34a24",
+            "id": "4d667888ff2772fd",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "___/img/icon.png"
+              },
+              "icon": "lucide-image",
+              "title": "icon"
+            }
+          },
+          {
+            "id": "0f394fdae4eda674",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "___/img/flags.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
-            }
-          },
-          {
-            "id": "90da8b4100def209",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "blog/bin/sot.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "sot"
-            }
-          },
-          {
-            "id": "a53f9a9dcfbecb41",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "blog/bin/ATO sponsors.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "ATO sponsors"
-            }
-          },
-          {
-            "id": "d79d287c1f468fb9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "blog/etc/skull.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "skull"
-            }
-          },
-          {
-            "id": "44647ce3513e10ba",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "blog/etc/skull.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "skull"
-            }
-          },
-          {
-            "id": "3d308ba219fd82b3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "blog/etc/Things that i want to do..md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Things that i want to do."
+              "title": "flags"
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -232,8 +174,8 @@
                 "showSearch": false,
                 "searchQuery": ""
               },
-              "icon": "lucide-archive",
-              "title": "All properties"
+              "icon": "lucide-ghost",
+              "title": "all-properties"
             }
           }
         ]
@@ -245,23 +187,35 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "markdown-importer:Open format converter": false,
+      "zk-prefixer:Create new unique note": false,
+      "random-note:Open random note": false,
+      "audio-recorder:Start/stop recording": false,
+      "workspaces:Manage workspace layouts": false,
+      "publish:Publish changes...": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false,
-      "workspaces:Manage workspace layouts": false,
-      "audio-recorder:Start/stop recording": false
+      "bases:Create new base": false
     }
   },
-  "active": "3d308ba219fd82b3",
+  "active": "0f394fdae4eda674",
   "lastOpenFiles": [
-    "blog/etc/skull.md",
-    "blog/etc/Things that i want to do..md",
+    "___/img/icon.png",
+    "___/img/flags.md",
+    "404.md",
+    "blog/usr/gopher.md",
+    "blog/usr/Pasted image 20251024204432.png",
+    "blog/usr/On old things.md",
+    "markdown/blog.md",
+    "blog/share/that is crazy.md",
+    "blog/usr/start of transmission.md",
     "index.md",
-    "Untitled.md",
+    "blog/etc/Things that i want to do..md",
+    "blog/etc/skull.md",
     "___/css/terror.css",
     "___/css/reset.css",
     "bsky.app.md",
@@ -275,16 +229,12 @@
     "Recording 20251008142413.m4a",
     "blog/etc/directory.md",
     "blog/index.md",
-    "markdown/blog.md",
     "markdown/film review.md",
     "blog/dev/Thoughts.md",
     "blog/dev/directory.md",
     "markdown/Untitled.md",
     "blog/usr/directory.md",
     "blog/share/directory.md",
-    "blog/lost+found/directory.md",
-    "blog/bin/directory.md",
-    "Invalid date.md",
     "Untitled.base"
   ]
 }

@@ -13,6 +13,6 @@ previous:
 next:
 writtendate: 18Oct2025
 subtitle:
-foot: True
+foot: true
 ---
 Yeah, I'm Lucas. My links are down there.

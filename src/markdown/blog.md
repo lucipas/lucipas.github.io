@@ -1,16 +1,17 @@
 ---
+title: MANDATORY
+desc: MANDATORY
+author:
+  - Lucas Nguyen
 keywords:
   - Programming
   - Software Engineering
-desc:
+foot: false
+subtitle:
 css:
-author:
-  - Lucas Nguyen
 generator:
 msg:
 previous:
 next:
 writtendate: "{{date}}"
-title:
-subtitle:
 ---

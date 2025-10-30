@@ -1,10 +1,17 @@
  #!/usr/bin/env python
   
-import shutil, os, subprocess
+import shutil, os, subprocess, re
+
+from feedgen.feed import FeedGenerator
+
+import yaml
+try:
+    from yaml import CLoader as Loader, CDumper as Dumper
+except ImportError:
+    from yaml import Loader, Dumper
 
 """
 TODO:
-RSS feed Gen
 Social Publish when a path has new files added to it.
 """
 
@@ -31,6 +38,47 @@ def rm(dest_dir):
         pass
     os.mkdir(dest_dir)
 
+
+
+def rssify(directory_path, title="lucipas.dev", link="https://lucipas.dev/", description="A personal blog about programming, technology, and life.", extensions="") :
+    pattern = r'---(.*?)---'
+    feed_gen = FeedGenerator()
+    feed_gen.title(title)
+    feed_gen.link(href=link+"blog/blog.rss", rel='self')
+    feed_gen.description(description)
+    feed_gen.language('en')
+    for root, _, files in os.walk(directory_path):
+        for file_name in files:
+            if file_name.endswith('.md'):
+                file_path = os.path.join(root, file_name)
+                pandoc = [
+                    "pandoc",
+                    "-f", "markdown", # from markdown not markdown_strict apparently b/c we like our yalma metadata.
+                    "-t", "html", # to hypertext markup language
+                    file_path            
+                ]
+                try:
+                    output = str(subprocess.check_output(pandoc), encoding="UTF-8")
+                    with open(file_path, 'r', encoding='utf-8') as file:
+                        content = file.read()
+                        match = re.search(pattern, content, re.DOTALL)
+                        frontmatter = yaml.load(match.group(1).strip(), Loader=Loader)
+
+                        fe = feed_gen.add_entry()
+                        fe.guid(file_path.replace('src/', link).replace('.md', '.html').replace("\\","/").replace(" ", "%20"))
+                        fe.title(frontmatter['title'])
+                        fe.description(frontmatter['desc'])
+                        # TODO map the kwargs
+                        # print(file_path.replace('src/', link).replace('.md', '.html').replace("\\","/").replace(" ", "%20"))
+                        fe.link(href=file_path.replace('src/', link).replace('.md', '.html').replace("\\","/").replace(" ", "%20"))
+                        fe.content(output)
+                        print(f"Processed file: {file_path.replace('src/', link).replace('.md', '.html')}")
+                except:
+                    print(f"Did not process: {file_path.replace('src/', link).replace('.md', '.html')}")
+    print(feed_gen.rss_str().decode("utf-8"))
+    feed_gen.rss_file(directory_path + 'blog.rss') # Write the RSS feed to a file
+
+# rssify("src/blog/")
 
 def printNotNullString(strings):
     if(strings != ""):
@@ -112,6 +160,5 @@ def build(src_dir, dest_dir, sed=False, icon_dir=".\\src\\___\\img\\", icon_name
 
     shutil.rmtree(os.path.join(DEST_DIR,"markdown/"))
     shutil.rmtree(os.path.join(DEST_DIR,".obsidian/"))
-# ---------------------
-
+# -----------------
 build(SRC_DIR, DEST_DIR)

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="100">
+
+    <head>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-size: 38px;
+                font-family: 'Cascadia Mono';
+            }
+
+            body {
+                background-color: #1a2c3e;
+                color: #ffffff;
+                padding-left: 2ch;
+                padding-right: 1ch;
+                padding-top: 1lh;
+                max-width: 1200px;
+            }
+
+            span {
+                padding-left: 1ch;
+            }
+
+            span.kwarg {
+                font-style: italic;
+            }
+
+            span.kwarg::before {
+                content: "[";
+                color: hsl(180, 40%, 65%);
+                font-style: italic;
+                font-weight:bolder;
+                padding-right: .5ch;
+            }
+            span.kwarg::after {
+                content: "]";
+                font-style: italic;
+                color: hsl(180, 40%, 65%);
+                padding-left: .5ch;
+                font-weight:bolder;
+            }
+
+
+            h1 {
+                margin-bottom: 1lh;
+                padding-left: .5ch;
+                border-left: .5ch solid wheat;
+                color: white;
+                
+            }
+
+            div.info {
+                padding-left: 1ch;
+
+            }
+
+            span.anotheroneforthebooks{
+                color: hsl(0, 0%, 75%);
+                padding: 0 ;
+            }
+            pre.brack{ 
+                color: hsl(110, 70%, 50%);
+            }
+        </style>
+    </head>
+
+<body>
+    <h1>conf(0): ATO<br /><span class="anotheroneforthebooks">(A blog)</span></h1>
+<pre class="brack">{</pre>
+    <div class="info">
+        <p>
+            Keywords= <span class="kwarg">"Confrences", "Tech Daddy"</span>
+        </p>
+        <p>Published=<span>12Dec25</span></p>
+        <p>
+        <pre>Author=    "Lucas Nguyen"</pre>
+        </p>
+
+    </div>
+<pre class="brack">}</pre>
+</body>
+
+</html>
