@@ -13,28 +13,13 @@
             "state": {
               "type": "image",
               "state": {
-                "file": "___/img/icon.png"
+                "file": "imgs/home.png"
               },
               "icon": "lucide-image",
-              "title": "icon"
-            }
-          },
-          {
-            "id": "0f394fdae4eda674",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "___/img/flags.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "flags"
+              "title": "home"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -202,8 +187,13 @@
       "bases:Create new base": false
     }
   },
-  "active": "0f394fdae4eda674",
+  "active": "4eea82f65d142a28",
   "lastOpenFiles": [
+    "_all.md",
+    "YearInReview.md",
+    "_bangers.md",
+    "_stubs/README.md",
+    "_stubs",
     "___/img/icon.png",
     "___/img/flags.md",
     "404.md",
@@ -232,9 +222,6 @@
     "markdown/film review.md",
     "blog/dev/Thoughts.md",
     "blog/dev/directory.md",
-    "markdown/Untitled.md",
-    "blog/usr/directory.md",
-    "blog/share/directory.md",
     "Untitled.base"
   ]
 }

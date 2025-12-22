@@ -1,50 +1,55 @@
 <!DOCTYPE html>
 
-<head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B2S71WH601"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-B2S71WH601');
-    </script>
-    <meta charset="utf-8" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="lucipas.dev" />
-    <meta name="theme-color" content="#1a2c3e">
-    $if(generator)$
-    <meta name="generator" content="$generator$" />
-    $endif$
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-    $if(keywords)$
-    <meta name="keywords" content="$for(keywords)$$keywords$$sep$, $endfor$" />$endif$
-    $if(desc)$
-    <meta name="description" content="$desc$" />
-    <meta property="og:description" content="$desc$" />
-    $endif$
-    <title>$title$</title>
-    <meta property="og:title" content="$title$" />
-    $for(acss)$
-    <link rel="stylesheet" href="$acss$" />
-    $endfor$
-    <meta property="og:type" content="article" />
-    <meta property="og:image" content="$ogimg$" />
-    $for(css)$
-    <link rel="stylesheet" href="$css$" />
-    $endfor$
-    $if(icon)$
-    <link rel="shortcut icon" type="image/png" href="$icon$">
-    $endif$
+<head lang="en-us">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B2S71WH601"></script>
+  <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-B2S71WH601');</script>
+  <meta charset="utf-8" />
+  <meta name="theme-color" content="#1a2c3e">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <link rel="shortcut icon" href="./imgs/home.png" type="image/x-icon">
+  <link rel="stylesheet" href="./css/index.css">
+  <title>$title$</title>
 </head>
 
 <body>
-    $if(title)$<h1>$title$</h1>$endif$
-    $if(desc)$<p class="description">$desc$</p>$endif$
+  <script>
+    window.onkeydown = (e) => {
+      if (e.ctrlKey || e.altKey || e.shiftKey || e.metaKey) {
+        return;
+      }
+      $if(back)$
+      if (e.key == "ArrowLeft") {
+        history.pushState("", document.location.href);
+        window.location.href = '$back$.html';
+      }
+      $endif$
+
+      $if(fwd)$
+      if (e.key == "ArrowRight") {
+        history.pushState("", document.location.href);
+        window.location.href = '$fwd$.html';
+      }
+      $endif$
+
+    }
+  </script>
+  <div class="center">
     $body$
-    $if(msg)$
-    <!-- $msg$ -->
+  </div>
+  <nav>
+    $if(back)$
+    <a href="$back$.html">&lt;= $back$</a>
     $endif$
+
+    <a href="./index.html">home</a>
+    
+    $if(fwd)$
+    <a href="$fwd$.html">$fwd$ =&gt;
+    </a>
+    $endif$
+
+  </nav>
 </body>
+
 </html>
