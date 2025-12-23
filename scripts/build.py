@@ -12,11 +12,7 @@ TEMPLATE = "./templates/blog.html"
 SRC_DIR = "./src/"
 DEST_DIR = "./dist/"
 
-try:
-    shutil.rmtree(DEST_DIR)
-except:
-    pass
-
+shutil.rmtree(DEST_DIR)
 os.makedirs(DEST_DIR)
 
 
