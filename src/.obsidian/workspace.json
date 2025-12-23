@@ -187,8 +187,10 @@
       "bases:Create new base": false
     }
   },
-  "active": "4eea82f65d142a28",
+  "active": "4d667888ff2772fd",
   "lastOpenFiles": [
+    "imgs/Untitled.md",
+    "imgs/home.png",
     "_all.md",
     "YearInReview.md",
     "_bangers.md",
@@ -220,8 +222,6 @@
     "blog/etc/directory.md",
     "blog/index.md",
     "markdown/film review.md",
-    "blog/dev/Thoughts.md",
-    "blog/dev/directory.md",
     "Untitled.base"
   ]
 }
