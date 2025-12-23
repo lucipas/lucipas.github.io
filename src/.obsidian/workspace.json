@@ -11,12 +11,14 @@
             "id": "4d667888ff2772fd",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "imgs/home.png"
+                "file": "yearInReview.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "home"
+              "icon": "lucide-file",
+              "title": "yearInReview"
             }
           }
         ]
@@ -187,12 +189,12 @@
       "bases:Create new base": false
     }
   },
-  "active": "4d667888ff2772fd",
+  "active": "4eea82f65d142a28",
   "lastOpenFiles": [
+    "imgs/home.png",
     "yearInReview.md",
     "83yearInReview.md",
     "imgs/Untitled.md",
-    "imgs/home.png",
     "_all.md",
     "YearInReview.md",
     "_bangers.md",
@@ -222,7 +224,6 @@
     "menu.md",
     "Recording 20251008142413.m4a",
     "blog/etc/directory.md",
-    "blog/index.md",
     "Untitled.base"
   ]
 }
