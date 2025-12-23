@@ -11,14 +11,12 @@
             "id": "4d667888ff2772fd",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "yearInReview.md",
-                "mode": "source",
-                "source": false
+                "file": "imgs/home.png"
               },
-              "icon": "lucide-file",
-              "title": "yearInReview"
+              "icon": "lucide-image",
+              "title": "home"
             }
           }
         ]
@@ -189,10 +187,11 @@
       "bases:Create new base": false
     }
   },
-  "active": "4eea82f65d142a28",
+  "active": "4d667888ff2772fd",
   "lastOpenFiles": [
-    "imgs/home.png",
     "yearInReview.md",
+    "year.md",
+    "imgs/home.png",
     "83yearInReview.md",
     "imgs/Untitled.md",
     "_all.md",
