@@ -11,12 +11,10 @@
             "id": "4d667888ff2772fd",
             "type": "leaf",
             "state": {
-              "type": "image",
-              "state": {
-                "file": "imgs/home.png"
-              },
-              "icon": "lucide-image",
-              "title": "home"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ]
@@ -189,9 +187,13 @@
   },
   "active": "4d667888ff2772fd",
   "lastOpenFiles": [
-    "yearInReview.md",
+    "404.md",
+    "x/loinks.md",
     "year.md",
+    "x/loinks.html",
     "imgs/home.png",
+    "x",
+    "yearInReview.md",
     "83yearInReview.md",
     "imgs/Untitled.md",
     "_all.md",
@@ -201,7 +203,6 @@
     "_stubs",
     "___/img/icon.png",
     "___/img/flags.md",
-    "404.md",
     "blog/usr/gopher.md",
     "blog/usr/Pasted image 20251024204432.png",
     "blog/usr/On old things.md",
@@ -220,9 +221,7 @@
     "Untitled 1.md",
     "blog/usr/linkedin chronicles/sot.md",
     "blog/usr/linkedin chronicles",
-    "menu.md",
     "Recording 20251008142413.m4a",
-    "blog/etc/directory.md",
     "Untitled.base"
   ]
 }
