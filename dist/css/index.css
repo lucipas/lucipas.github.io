@@ -221,4 +221,8 @@
   p {
     display: block;
   }
+
+  .d-x{
+    display: none;
+  }
 }
