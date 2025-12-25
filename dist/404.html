@@ -23,8 +23,16 @@
     }
   </script>
   <div class="center">
+    <h1 id="error-not-found">404 error not found</h1>
     <h1 id="you-broke-it">YOU BROKE IT…</h1>
     <h1 id="again">AGAIN?</h1>
+    <p><a id="randomizer" href="javascript:(function(){
+      var links = Array.from(document.querySelectorAll('a[href]')).filter(a => a.id !== 'randomizer');
+      if (links.length > 0) {
+        window.open(links[Math.floor(Math.random() * links.length)].href, '_blank');
+      }
+    })();"> link roulette (?) </a></p>
+    <p><a href="https://www.youtube.com/watch?v=epyRUp0BhrA"></a> <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"></a> <a href="https://www.youtube.com/watch?v=FJ3oHpup-pk"></a> <a href="https://x.com/lucipas_"></a> <a href="https://www.linkedin.com/in/lucasisaswe/"></a></p>
   </div>
   <nav>
     
