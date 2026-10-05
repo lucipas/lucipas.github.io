@@ -1,0 +1,152 @@
+* {
+	scrollbar-color: color-mix(in srgb, var(--scroll), #33506b) transparent;
+}
+
+::selection {
+	background-color: var(--sel-bg);
+	color: #1a2c3e;
+}
+::-moz-selection {
+	background-color: var(--sel-bg);
+	color: #1a2c3e;
+}
+
+@keyframes sel-shift {
+	0%,
+	100% {
+		--sel-bg: #8ecae6;
+	}
+	50% {
+		--sel-bg: #ff7a59;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	body {
+		animation: none;
+	}
+}
+
+/* ---------- Nav ---------- */
+
+.nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 1rem 2rem;
+	z-index: 10;
+	font-size: 20px;
+	opacity: 0;
+	transform: translateY(-40px);
+	background: color-mix(in srgb, var(--bg) 75%, transparent);
+	backdrop-filter: blur(6px);
+}
+
+.nav a {
+	color: var(--fg);
+	text-decoration: none;
+}
+
+.nav-links {
+	display: flex;
+	gap: 1.5rem;
+}
+
+.nav progress {
+	flex-basis: 100%;
+	order: 1;
+	margin-top: 0.5rem;
+	height: 6px;
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 0 10vw;
+}
+
+#heading {
+	font-size: clamp(3rem, 10vw, 8rem);
+}
+
+.wavy-text {
+	filter: url(#wavy) url(#glow);
+	color: white;
+}
+
+
+.inv-wavy-text {
+	filter: url(#inv-wavy);
+	color: white;
+}
+
+
+
+.subtitle {
+	font-size: clamp(1.2rem, 3vw, 2rem);
+	color: var(--accent);
+	margin-top: 1rem;
+}
+
+.tagline {
+	margin-top: 0.5rem;
+	opacity: 0.8;
+}
+
+/* ---------- Sections ---------- */
+
+.section {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 10vh 10vw;
+}
+
+.section h2 {
+	font-size: clamp(2rem, 5vw, 4rem);
+	margin-bottom: 1.5rem;
+	color: var(--accent);
+}
+
+.section p {
+	max-width: 55ch;
+	line-height: 1.6;
+}
+
+.section a {
+	color: var(--accent);
+}
+
+/* ---------- Cards ---------- */
+
+.cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: 1.5rem;
+}
+
+.card {
+	border: 1px solid var(--fg);
+	padding: 1.5rem;
+	border-radius: 1ch;
+	transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+	transform: translateY(-6px);
+	border-color: var(--accent);
+}
+
+.card h3 {
+	margin-bottom: 0.75rem;
+}

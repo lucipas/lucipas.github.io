@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Lucas Nguyen</title>
+		<link rel="stylesheet" href="css/const.css" />
+		<link rel="stylesheet" href="css/main.css" />
+	</head>
+	<body>
+		<svg width="0" height="0" style="position: absolute" aria-hidden="true">
+			<filter id="wavy">
+				<feTurbulence
+					type="fractalNoise"
+					baseFrequency=".2"
+					numOctaves="3"
+					result="noise"
+				/>
+				<feDisplacementMap
+					in="SourceGraphic"
+					in2="noise"
+					scale="0"
+					xChannelSelector="R"
+					yChannelSelector="B"
+				/>
+			</filter>
+<filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+    <!-- 1. Take original alpha channel and blur it -->
+    <feGaussianBlur in="SourceAlpha" stdDeviation="10" result="blur" />
+    
+    <!-- 2. Create a solid cyan flood color -->
+    <feFlood flood-color="#708090" flood-opacity="0.25" result="color" />
+    
+    <!-- 3. Mask the color to the shape of the blurred alpha -->
+    <feComposite in="color" in2="blur" operator="in" result="glow" />
+    
+    <!-- 4. Layer the original shape on top of the glowing background -->
+    <feMerge>
+      <feMergeNode in="glow" />
+      <feMergeNode in="SourceGraphic" />
+    </feMerge>
+  </filter>
+
+			<filter id="inv-wavy">
+				<feTurbulence
+					type="fractalNoise"
+					baseFrequency=".5"
+					numOctaves="3"
+					result="noise"
+				/>
+				<feDisplacementMap
+					in="SourceGraphic"
+					in2="noise"
+					scale="14"
+					xChannelSelector="R"
+					yChannelSelector="B"
+				/>
+			</filter>
+		</svg>
+
+		<nav class="nav"  >
+			<a href="#top" class="inv-wavy-text">Lucas Nguyen</a>
+			<div class="nav-links">
+				<a href="#about " class="inv-wavy-text" >About</a>
+				<a href="#projects" class="inv-wavy-text">Projects</a>
+				<a href="#contact" class="inv-wavy-text">Contact</a>
+			</div>
+			<progress value="0" min="0" max="100"></progress>
+		</nav>
+
+		<div id="smooth-wrapper">
+			<div id="smooth-content">
+				<header class="hero" id="top">
+					<h1 id="heading" class="wavy-text">Lucas Nguyen</h1>
+					<p class="subtitle">Software Engineer</p>
+					<p class="tagline">I like to code and design stuff. Cool, eh?</p>
+				</header>
+
+				<section id="about" class="section">
+					<h2>About</h2>
+					<p>
+						I build things for the web — mostly software, sometimes
+						hardware, always with an eye for design. Based somewhere,
+						thinking everywhere.
+					</p>
+				</section>
+
+				<section id="projects" class="section">
+					<h2>Projects</h2>
+					<div class="cards">
+						<div class="card">
+							<h3>Site</h3>
+							<p>This personal site, wavy and animated.</p>
+						</div>
+						<div class="card">
+							<h3>Project Two</h3>
+							<p>An app that does something useful.</p>
+						</div>
+						<div class="card">
+							<h3>Project Three</h3>
+							<p>A thing I designed over a weekend.</p>
+						</div>
+					</div>
+				</section>
+
+				<section id="contact" class="section">
+					<h2>Contact</h2>
+					<p>
+						Reach me at
+						<a href="mailto:hello@example.com">hello@example.com</a>.
+					</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.13/dist/gsap.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.13/dist/ScrollTrigger.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.13/dist/ScrollSmoother.min.js"></script>
+
+		<script src="js/mtrap.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
