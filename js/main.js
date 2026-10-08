@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-	if (typeof gsap === "undefined") return;
 
+	if (typeof gsap === "undefined") return;
+  	gsap.registerPlugin(ScrollTrigger,ScrollSmoother,ScrollToPlugin,RoughEase,ExpoScaleEase,SlowMo,CustomEase,CustomBounce,CustomWiggle)
 	// Always start at the top on refresh so the progress bar stays in sync
 	if ("scrollRestoration" in history) {
 		history.scrollRestoration = "manual";

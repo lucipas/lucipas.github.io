@@ -36,8 +36,8 @@ progress {
   
   /* Layout & Sizing */
   width: 100%;
-  height: 10px;
-  border-radius: 10px;
+  height: 2px !important;
+  border-radius: 0px;
   overflow: hidden; /* Clips children to match border-radius */
   
   /* Track Background (Firefox & standard) */
